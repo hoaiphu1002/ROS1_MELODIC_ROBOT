@@ -1,0 +1,8 @@
+prefix=/home/hoai_phu/catkin_ws/devel
+
+Name: robot_fablab
+Description: Description of robot_fablab
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/hoai_phu/catkin_ws/devel
+
+Name: slam
+Description: Description of slam
+Version: 0.0.0
+Cflags: -I/home/hoai_phu/catkin_ws/src/slam/include
+Libs: -L${prefix}/lib 
+Requires: roscpp nav_msgs sensor_msgs tf

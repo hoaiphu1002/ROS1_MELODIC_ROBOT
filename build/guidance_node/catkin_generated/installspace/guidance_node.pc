@@ -1,0 +1,8 @@
+prefix=/home/hoai_phu/catkin_ws/install
+
+Name: guidance_node
+Description: Description of guidance_node
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lguidance_node
+Requires: roscpp utils message_runtime

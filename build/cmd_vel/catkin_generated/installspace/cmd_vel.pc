@@ -1,0 +1,8 @@
+prefix=/home/hoai_phu/catkin_ws/install
+
+Name: cmd_vel
+Description: Description of cmd_vel
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lcan_node
+Requires: roscpp utils message_runtime tf

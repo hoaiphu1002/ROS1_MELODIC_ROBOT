@@ -1,0 +1,8 @@
+prefix=/home/hoai_phu/catkin_ws/install
+
+Name: launch_manager
+Description: Description of launch_manager
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

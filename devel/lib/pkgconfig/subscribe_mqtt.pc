@@ -1,0 +1,8 @@
+prefix=/home/hoai_phu/catkin_ws/devel
+
+Name: subscribe_mqtt
+Description: Description of subscribe_mqtt
+Version: 0.0.0
+Cflags: -I/home/hoai_phu/catkin_ws/src/subscribe_mqtt/include
+Libs: -L${prefix}/lib -lsubscribe_mqtt
+Requires: geometry_msgs roscpp rospy std_msgs

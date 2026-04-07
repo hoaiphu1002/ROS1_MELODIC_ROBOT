@@ -1,0 +1,2 @@
+camera:cmd_vel:guidance_node:launch_manager:obstacle_detection:publish_mqtt:robot_fablab:rover_2dnav:rplidar_ros:slam:subscribe_mqtt:utils
+-DCATKIN_DEVEL_PREFIX=/home/hoai_phu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hoai_phu/catkin_ws/install -G Unix Makefiles
