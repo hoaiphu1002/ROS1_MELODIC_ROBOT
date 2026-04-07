@@ -25,9 +25,9 @@
           --shutdown-timeout 3"/>
 
   <!-- load parameter model -->
-  <param name="robot_description" command="$(find xacro)/xacro '$(find robot_fablab)/urdf/robot_fablab.xacro'" />
+  <param name="robot_description" textfile="$(find robot_fablab)/urdf/ros_f.urdf" />
 
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description -urdf -model reception" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description -urdf -model ros_f" />
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
 
