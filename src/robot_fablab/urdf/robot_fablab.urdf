@@ -76,17 +76,20 @@
     </sensor>
   </gazebo> -->
   <gazebo reference="imu_link">
+    <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
-      <update_rate>100.0</update_rate>
+      <update_rate>100</update_rate>
       <visualize>true</visualize>
-      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
-        <ros>
-          <namespace>/imu</namespace>
-        </ros>
-        <frameName>imu_link</frameName>
+      <plugin filename="libgazebo_ros_imu.so" name="imu_plugin">
+        <robotNamespace>/</robotNamespace>
         <topicName>imu/data</topicName>
-        <initial_orientation_as_reference>false</initial_orientation_as_reference>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
       </plugin>
     </sensor>
   </gazebo>
@@ -245,7 +248,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_fablab/meshes/link_lidar.STL"/>
+        <cylinder length="0.04" radius="0.035"/>
       </geometry>
       <material name="">
         <color rgba="0 0 0 1"/>
@@ -254,7 +257,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_fablab/meshes/link_lidar.STL"/>
+        <cylinder length="0.04" radius="0.035"/>
       </geometry>
     </collision>
   </link>
@@ -273,7 +276,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_fablab/meshes/link_camera.STL"/>
+        <box size="0.03 0.09 0.025"/>
       </geometry>
       <material name="">
         <color rgba="0.27059 0.27059 0.27059 1"/>
@@ -282,7 +285,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://robot_fablab/meshes/link_camera.STL"/>
+        <box size="0.03 0.09 0.025"/>
       </geometry>
     </collision>
   </link>
