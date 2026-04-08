@@ -1,13 +1,14 @@
 <?xml version='1.0'?>
 
-<robot name="robot_fablab_gazebo"
-  xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="robot_fablab_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <!-- ================= CONTROL PLUGIN ================= -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
     </plugin>
   </gazebo>
 
+  <!-- ================= LIDAR SENSOR ================= -->
   <gazebo reference="link_lidar">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -29,10 +30,6 @@
         </range>
         <noise>
           <type>gaussian</type>
-          <!-- Noise parameters based on published spec for Hokuyo laser
-               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
-               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
-               reading. -->
           <mean>0.0</mean>
           <stddev>0.01</stddev>
         </noise>
@@ -44,39 +41,7 @@
     </sensor>
   </gazebo>
 
-  <!-- <gazebo reference="link_camera">
-    <sensor type="camera" name="camera">
-      <update_rate>30.0</update_rate>
-      <visualize></visualize>
-      <camera name="head">
-        <horizontal_fov>1.3962634</horizontal_fov>
-        <image>
-          <width>800</width>
-          <height>800</height>
-          <format>R8G8B8</format>
-        </image>
-        <clip>
-          <near>0.02</near>
-          <far>300</far>
-        </clip>
-      </camera>
-      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>/camera</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>link_camera</frameName>
-        <hackBaseline>0.07</hackBaseline>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
-      </plugin>
-    </sensor>
-  </gazebo> -->
-
+  <!-- ================= IMU SENSOR ================= -->
   <gazebo reference="imu_link">
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
@@ -93,40 +58,26 @@
     </sensor>
   </gazebo>
 
+  <!-- ================= MATERIALS / COLORS ================= -->
+  <!-- Make base_link white -->
   <gazebo reference="base_link">
-    <material>
-          Gazebo/Blue
-    </material>
+    <material>Gazebo/White</material>
   </gazebo>
 
-  <gazebo reference="link_left">
-    <material>
-          Gazebo/Black
-    </material>
+  <gazebo reference="Left_wheel">
+    <material>Gazebo/Black</material>
   </gazebo>
 
-  <gazebo reference="link_right">
-    <material>
-          Gazebo/Black
-    </material>
+  <gazebo reference="Right_wheel">
+    <material>Gazebo/Black</material>
   </gazebo>
 
-  <gazebo reference="link_caster">
-    <material>
-          Gazebo/Black
-    </material>
-  </gazebo>
-
-  <gazebo reference="link_camera">
-    <material>
-          Gazebo/Black
-    </material>
+  <gazebo reference="Caster">
+    <material>Gazebo/Black</material>
   </gazebo>
 
   <gazebo reference="link_lidar">
-    <material>
-          Gazebo/Black
-    </material>
+    <material>Gazebo/Black</material>
   </gazebo>
 
 </robot>
