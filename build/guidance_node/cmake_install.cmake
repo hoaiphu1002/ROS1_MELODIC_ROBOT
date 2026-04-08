@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/guidance_node
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/guidance_node/catkin_generated/installspace/guidance_node.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/guidance_node/catkin_generated/installspace/guidance_node.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/guidance_node/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/guidance_node/catkin_generated/installspace/guidance_nodeConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/guidance_node/catkin_generated/installspace/guidance_nodeConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/guidance_node/catkin_generated/installspace/guidance_nodeConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/guidance_node/catkin_generated/installspace/guidance_nodeConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/guidance_node" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/guidance_node/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/guidance_node" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/package.xml")
 endif()
 

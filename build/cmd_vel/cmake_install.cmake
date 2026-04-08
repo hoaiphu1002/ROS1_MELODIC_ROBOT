@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/cmd_vel
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/cmd_vel/catkin_generated/installspace/cmd_vel.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/cmd_vel/catkin_generated/installspace/cmd_vel.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmd_vel/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/cmd_vel/catkin_generated/installspace/cmd_velConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/cmd_vel/catkin_generated/installspace/cmd_velConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/cmd_vel/catkin_generated/installspace/cmd_velConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/cmd_vel/catkin_generated/installspace/cmd_velConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmd_vel" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/cmd_vel/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmd_vel" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/package.xml")
 endif()
 

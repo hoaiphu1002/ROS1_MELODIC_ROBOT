@@ -67,14 +67,14 @@ set(publish_mqtt_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(publish_mqtt_SOURCE_PREFIX /home/hoai_phu/catkin_ws/src/publish_mqtt)
-  set(publish_mqtt_DEVEL_PREFIX /home/hoai_phu/catkin_ws/devel)
+  set(publish_mqtt_SOURCE_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/src/publish_mqtt)
+  set(publish_mqtt_DEVEL_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/devel)
   set(publish_mqtt_INSTALL_PREFIX "")
   set(publish_mqtt_PREFIX ${publish_mqtt_DEVEL_PREFIX})
 else()
   set(publish_mqtt_SOURCE_PREFIX "")
   set(publish_mqtt_DEVEL_PREFIX "")
-  set(publish_mqtt_INSTALL_PREFIX /home/hoai_phu/catkin_ws/install)
+  set(publish_mqtt_INSTALL_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/install)
   set(publish_mqtt_PREFIX ${publish_mqtt_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hoai_phu/catkin_ws/install/lib;/home/hoai_phu/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/hoai_phu/ROS1_MELODIC_ROBOT/install/lib;/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

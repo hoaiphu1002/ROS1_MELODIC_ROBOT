@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/src/robot_fablab/src/set_initial_pose.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab/src/set_initial_pose.cpp
 ros/ros.h
 -
 geometry_msgs/PoseWithCovarianceStamped.h

@@ -1,4 +1,4 @@
-prefix=/home/hoai_phu/catkin_ws/devel
+prefix=/home/hoai_phu/ROS1_MELODIC_ROBOT/devel
 
 Name: robot_fablab
 Description: Description of robot_fablab

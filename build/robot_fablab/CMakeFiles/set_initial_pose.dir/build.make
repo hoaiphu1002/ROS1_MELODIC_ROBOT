@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hoai_phu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/hoai_phu/ROS1_MELODIC_ROBOT/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hoai_phu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/hoai_phu/ROS1_MELODIC_ROBOT/build
 
 # Include any dependencies generated for this target.
 include robot_fablab/CMakeFiles/set_initial_pose.dir/depend.make
@@ -58,17 +58,17 @@ include robot_fablab/CMakeFiles/set_initial_pose.dir/progress.make
 include robot_fablab/CMakeFiles/set_initial_pose.dir/flags.make
 
 robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o: robot_fablab/CMakeFiles/set_initial_pose.dir/flags.make
-robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o: /home/hoai_phu/catkin_ws/src/robot_fablab/src/set_initial_pose.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoai_phu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o"
-	cd /home/hoai_phu/catkin_ws/build/robot_fablab && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o -c /home/hoai_phu/catkin_ws/src/robot_fablab/src/set_initial_pose.cpp
+robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab/src/set_initial_pose.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hoai_phu/ROS1_MELODIC_ROBOT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o"
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o -c /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab/src/set_initial_pose.cpp
 
 robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.i"
-	cd /home/hoai_phu/catkin_ws/build/robot_fablab && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hoai_phu/catkin_ws/src/robot_fablab/src/set_initial_pose.cpp > CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.i
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab/src/set_initial_pose.cpp > CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.i
 
 robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.s"
-	cd /home/hoai_phu/catkin_ws/build/robot_fablab && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hoai_phu/catkin_ws/src/robot_fablab/src/set_initial_pose.cpp -o CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.s
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab/src/set_initial_pose.cpp -o CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.s
 
 robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o.requires:
 
@@ -88,33 +88,33 @@ set_initial_pose_OBJECTS = \
 # External object files for target set_initial_pose
 set_initial_pose_EXTERNAL_OBJECTS =
 
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: robot_fablab/CMakeFiles/set_initial_pose.dir/build.make
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libroscpp.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librosconsole.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librostime.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libcpp_common.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.5.2
-/home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose: robot_fablab/CMakeFiles/set_initial_pose.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hoai_phu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose"
-	cd /home/hoai_phu/catkin_ws/build/robot_fablab && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/set_initial_pose.dir/link.txt --verbose=$(VERBOSE)
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: robot_fablab/CMakeFiles/set_initial_pose.dir/src/set_initial_pose.cpp.o
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: robot_fablab/CMakeFiles/set_initial_pose.dir/build.make
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libroscpp.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librosconsole.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/librostime.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /opt/ros/melodic/lib/libcpp_common.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.5.2
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose: robot_fablab/CMakeFiles/set_initial_pose.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hoai_phu/ROS1_MELODIC_ROBOT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose"
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/set_initial_pose.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-robot_fablab/CMakeFiles/set_initial_pose.dir/build: /home/hoai_phu/catkin_ws/devel/lib/robot_fablab/set_initial_pose
+robot_fablab/CMakeFiles/set_initial_pose.dir/build: /home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/robot_fablab/set_initial_pose
 
 .PHONY : robot_fablab/CMakeFiles/set_initial_pose.dir/build
 
@@ -123,10 +123,10 @@ robot_fablab/CMakeFiles/set_initial_pose.dir/requires: robot_fablab/CMakeFiles/s
 .PHONY : robot_fablab/CMakeFiles/set_initial_pose.dir/requires
 
 robot_fablab/CMakeFiles/set_initial_pose.dir/clean:
-	cd /home/hoai_phu/catkin_ws/build/robot_fablab && $(CMAKE_COMMAND) -P CMakeFiles/set_initial_pose.dir/cmake_clean.cmake
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab && $(CMAKE_COMMAND) -P CMakeFiles/set_initial_pose.dir/cmake_clean.cmake
 .PHONY : robot_fablab/CMakeFiles/set_initial_pose.dir/clean
 
 robot_fablab/CMakeFiles/set_initial_pose.dir/depend:
-	cd /home/hoai_phu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hoai_phu/catkin_ws/src /home/hoai_phu/catkin_ws/src/robot_fablab /home/hoai_phu/catkin_ws/build /home/hoai_phu/catkin_ws/build/robot_fablab /home/hoai_phu/catkin_ws/build/robot_fablab/CMakeFiles/set_initial_pose.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hoai_phu/ROS1_MELODIC_ROBOT/src /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab /home/hoai_phu/ROS1_MELODIC_ROBOT/build /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab /home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab/CMakeFiles/set_initial_pose.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_fablab/CMakeFiles/set_initial_pose.dir/depend
 

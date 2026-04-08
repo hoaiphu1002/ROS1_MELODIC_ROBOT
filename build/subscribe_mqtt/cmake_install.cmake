@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/subscribe_mqtt
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/subscribe_mqtt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/subscribe_mqtt/catkin_generated/installspace/subscribe_mqtt.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/subscribe_mqtt/catkin_generated/installspace/subscribe_mqtt.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/subscribe_mqtt/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/subscribe_mqtt/catkin_generated/installspace/subscribe_mqttConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/subscribe_mqtt/catkin_generated/installspace/subscribe_mqttConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/subscribe_mqtt/catkin_generated/installspace/subscribe_mqttConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/subscribe_mqtt/catkin_generated/installspace/subscribe_mqttConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/subscribe_mqtt" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/subscribe_mqtt/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/subscribe_mqtt" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/subscribe_mqtt/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/subscribe_mqtt" TYPE PROGRAM FILES "/home/hoai_phu/catkin_ws/build/subscribe_mqtt/catkin_generated/installspace/waypoints_subscriber.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/subscribe_mqtt" TYPE PROGRAM FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/subscribe_mqtt/catkin_generated/installspace/waypoints_subscriber.py")
 endif()
 

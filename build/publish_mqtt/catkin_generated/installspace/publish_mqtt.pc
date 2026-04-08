@@ -1,4 +1,4 @@
-prefix=/home/hoai_phu/catkin_ws/install
+prefix=/home/hoai_phu/ROS1_MELODIC_ROBOT/install
 
 Name: publish_mqtt
 Description: Description of publish_mqtt

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hoai_phu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/hoai_phu/ROS1_MELODIC_ROBOT/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hoai_phu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/hoai_phu/ROS1_MELODIC_ROBOT/build
 
 # Utility rule file for sensor_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/build: sensor
 .PHONY : obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 
 obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
-	cd /home/hoai_phu/catkin_ws/build/obstacle_detection && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build/obstacle_detection && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 
 obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend:
-	cd /home/hoai_phu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hoai_phu/catkin_ws/src /home/hoai_phu/catkin_ws/src/obstacle_detection /home/hoai_phu/catkin_ws/build /home/hoai_phu/catkin_ws/build/obstacle_detection /home/hoai_phu/catkin_ws/build/obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hoai_phu/ROS1_MELODIC_ROBOT/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hoai_phu/ROS1_MELODIC_ROBOT/src /home/hoai_phu/ROS1_MELODIC_ROBOT/src/obstacle_detection /home/hoai_phu/ROS1_MELODIC_ROBOT/build /home/hoai_phu/ROS1_MELODIC_ROBOT/build/obstacle_detection /home/hoai_phu/ROS1_MELODIC_ROBOT/build/obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : obstacle_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
 

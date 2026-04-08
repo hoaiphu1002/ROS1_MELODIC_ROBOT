@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/camera
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/camera
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/camera/catkin_generated/installspace/camera.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/camera/catkin_generated/installspace/camera.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/camera/catkin_generated/installspace/cameraConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/camera/catkin_generated/installspace/cameraConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/camera/catkin_generated/installspace/cameraConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/camera/catkin_generated/installspace/cameraConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/camera/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/camera/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/camera" TYPE PROGRAM FILES "/home/hoai_phu/catkin_ws/build/camera/catkin_generated/installspace/camera_server.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/camera" TYPE PROGRAM FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/camera/catkin_generated/installspace/camera_server.py")
 endif()
 

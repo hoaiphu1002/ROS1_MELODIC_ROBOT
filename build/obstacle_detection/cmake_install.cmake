@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/obstacle_detection
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/obstacle_detection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/obstacle_detection/catkin_generated/installspace/obstacle_detection.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/obstacle_detection/catkin_generated/installspace/obstacle_detection.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/obstacle_detection/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/obstacle_detection/catkin_generated/installspace/obstacle_detectionConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/obstacle_detection/catkin_generated/installspace/obstacle_detectionConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/obstacle_detection/catkin_generated/installspace/obstacle_detectionConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/obstacle_detection/catkin_generated/installspace/obstacle_detectionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/obstacle_detection" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/obstacle_detection/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/obstacle_detection" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/obstacle_detection/package.xml")
 endif()
 

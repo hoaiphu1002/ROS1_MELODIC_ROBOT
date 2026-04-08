@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/launch_manager
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/launch_manager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/launch_manager/catkin_generated/installspace/launch_manager.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/launch_manager/catkin_generated/installspace/launch_manager.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/launch_manager/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/launch_manager/catkin_generated/installspace/launch_managerConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/launch_manager/catkin_generated/installspace/launch_managerConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/launch_manager/catkin_generated/installspace/launch_managerConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/launch_manager/catkin_generated/installspace/launch_managerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/launch_manager" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/launch_manager/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/launch_manager" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/launch_manager/package.xml")
 endif()
 

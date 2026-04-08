@@ -1,8 +1,8 @@
-prefix=/home/hoai_phu/catkin_ws/devel
+prefix=/home/hoai_phu/ROS1_MELODIC_ROBOT/devel
 
 Name: guidance_node
 Description: Description of guidance_node
 Version: 0.0.0
-Cflags: -I/home/hoai_phu/catkin_ws/src/guidance_node/include
+Cflags: -I/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/include
 Libs: -L${prefix}/lib -lguidance_node
 Requires: roscpp utils message_runtime

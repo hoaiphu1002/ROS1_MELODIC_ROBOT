@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/devel/include/utils/cmd_vel.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/cmd_vel.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/devel/include/utils/pose_robot.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/pose_robot.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/src/publish_mqtt/include/mqtt.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/publish_mqtt/include/mqtt.h
 ros/ros.h
 -
 utils/pose_robot.h
@@ -46,7 +46,7 @@ utils/pose_robot.h
 utils/cmd_vel.h
 -
 
-/home/hoai_phu/catkin_ws/src/publish_mqtt/src/publish.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/publish_mqtt/src/publish.cpp
 mqtt.h
 -
 geometry_msgs/PoseWithCovarianceStamped.h

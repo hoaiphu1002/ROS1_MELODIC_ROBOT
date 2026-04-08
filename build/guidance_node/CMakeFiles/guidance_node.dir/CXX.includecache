@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/devel/include/utils/cmd_vel.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/cmd_vel.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/devel/include/utils/pose_robot.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/pose_robot.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/devel/include/utils/waypoints.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/waypoints.h
 string
 -
 vector
@@ -54,7 +54,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/src/guidance_node/include/guidance.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/include/guidance.h
 ros/ros.h
 -
 pid.h
@@ -70,15 +70,15 @@ tf2_msgs/TFMessage.h
 geometry_msgs/PoseWithCovarianceStamped.h
 -
 
-/home/hoai_phu/catkin_ws/src/guidance_node/include/pid.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/include/pid.h
 ros/ros.h
 -
 
-/home/hoai_phu/catkin_ws/src/guidance_node/src/PID.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/src/PID.cpp
 pid.h
-/home/hoai_phu/catkin_ws/src/guidance_node/src/pid.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/src/pid.h
 
-/home/hoai_phu/catkin_ws/src/guidance_node/src/guidance_node.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/src/guidance_node.cpp
 guidance.h
 -
 gazebo_msgs/ModelStates.h
@@ -106,9 +106,9 @@ sstream
 utility
 -
 guidance.h
-/home/hoai_phu/catkin_ws/src/guidance_node/src/guidance.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/src/guidance.h
 pid.h
-/home/hoai_phu/catkin_ws/src/guidance_node/src/pid.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/guidance_node/src/pid.h
 
 /opt/ros/melodic/include/gazebo_msgs/ModelStates.h
 string

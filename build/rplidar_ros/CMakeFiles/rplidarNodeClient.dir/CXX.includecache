@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/src/rplidar_ros/src/client.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/rplidar_ros/src/client.cpp
 ros/ros.h
-/home/hoai_phu/catkin_ws/src/rplidar_ros/src/ros/ros.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/rplidar_ros/src/ros/ros.h
 sensor_msgs/LaserScan.h
-/home/hoai_phu/catkin_ws/src/rplidar_ros/src/sensor_msgs/LaserScan.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/rplidar_ros/src/sensor_msgs/LaserScan.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

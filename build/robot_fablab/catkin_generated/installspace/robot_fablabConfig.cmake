@@ -67,14 +67,14 @@ set(robot_fablab_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robot_fablab_SOURCE_PREFIX /home/hoai_phu/catkin_ws/src/robot_fablab)
-  set(robot_fablab_DEVEL_PREFIX /home/hoai_phu/catkin_ws/devel)
+  set(robot_fablab_SOURCE_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab)
+  set(robot_fablab_DEVEL_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/devel)
   set(robot_fablab_INSTALL_PREFIX "")
   set(robot_fablab_PREFIX ${robot_fablab_DEVEL_PREFIX})
 else()
   set(robot_fablab_SOURCE_PREFIX "")
   set(robot_fablab_DEVEL_PREFIX "")
-  set(robot_fablab_INSTALL_PREFIX /home/hoai_phu/catkin_ws/install)
+  set(robot_fablab_INSTALL_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/install)
   set(robot_fablab_PREFIX ${robot_fablab_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hoai_phu/catkin_ws/install/lib;/home/hoai_phu/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/hoai_phu/ROS1_MELODIC_ROBOT/install/lib;/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

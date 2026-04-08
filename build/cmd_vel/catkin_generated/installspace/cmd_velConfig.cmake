@@ -67,14 +67,14 @@ set(cmd_vel_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(cmd_vel_SOURCE_PREFIX /home/hoai_phu/catkin_ws/src/cmd_vel)
-  set(cmd_vel_DEVEL_PREFIX /home/hoai_phu/catkin_ws/devel)
+  set(cmd_vel_SOURCE_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel)
+  set(cmd_vel_DEVEL_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/devel)
   set(cmd_vel_INSTALL_PREFIX "")
   set(cmd_vel_PREFIX ${cmd_vel_DEVEL_PREFIX})
 else()
   set(cmd_vel_SOURCE_PREFIX "")
   set(cmd_vel_DEVEL_PREFIX "")
-  set(cmd_vel_INSTALL_PREFIX /home/hoai_phu/catkin_ws/install)
+  set(cmd_vel_INSTALL_PREFIX /home/hoai_phu/ROS1_MELODIC_ROBOT/install)
   set(cmd_vel_PREFIX ${cmd_vel_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hoai_phu/catkin_ws/install/lib;/home/hoai_phu/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/hoai_phu/ROS1_MELODIC_ROBOT/install/lib;/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <arg name="world" default="$(find robot_fablab)/worlds/empty_office.world" />
+  <arg name="world" default="$(find robot_fablab)/worlds/empty_world.world" />
 
   <!-- spawn pose -->
   <arg name="spawn_x" default="0.0" />
@@ -18,27 +18,34 @@
     <arg name="debug" value="false"/>
   </include>
 
-  <!-- load controller -->
+  <!-- load controller params -->
   <rosparam file="$(find robot_fablab)/config/joint_states.yaml" command="load"/>
   <rosparam file="$(find robot_fablab)/config/diff_drive.yaml" command="load"/>
-
-  <node name="robot_arm_controller_spawner" pkg="controller_manager" type="spawner" respawn="true" output="screen"
-        args="/Diff_Drive/joint_state_controller
-              /Diff_Drive/diff_drive_controller
-              --shutdown-timeout 3"/>
 
   <!-- load parameter model -->
   <param name="robot_description"
          command="$(find xacro)/xacro '$(find robot_fablab)/urdf/robot_fablab.xacro'" />
 
-  <!-- IMPORTANT: change model name so Gazebo does not reuse the old model -->
+  <!-- spawn robot -->
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
         args="-param robot_description -urdf
               -model reception_white_v1
               -x $(arg spawn_x) -y $(arg spawn_y) -z $(arg spawn_z)
               -Y $(arg spawn_yaw)" />
 
+  <!-- spawn controllers AFTER robot is in gazebo (important) -->
+  <node name="robot_arm_controller_spawner" pkg="controller_manager" type="spawner" respawn="true" output="screen"
+        args="/Diff_Drive/joint_state_controller
+              /Diff_Drive/diff_drive_controller
+              --shutdown-timeout 3"/>
+
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- rqt steering -->
+  <node name="rqt_robot_steering" pkg="rqt_gui" type="rqt_gui" output="screen"
+        args="-s rqt_robot_steering">
+    <param name="default_topic" value="/cmd_vel"/>
+  </node>
 
 </launch>

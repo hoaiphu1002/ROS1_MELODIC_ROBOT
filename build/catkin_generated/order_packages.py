@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/hoai_phu/catkin_ws/src'
+source_root_dir = '/home/hoai_phu/ROS1_MELODIC_ROBOT/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/hoai_phu/catkin_ws/devel;/opt/ros/melodic'.split(';') if '/home/hoai_phu/catkin_ws/devel;/opt/ros/melodic' != '' else []
+underlay_workspaces = '/home/hoai_phu/ROS1_MELODIC_ROBOT/devel;/opt/ros/melodic'.split(';') if '/home/hoai_phu/ROS1_MELODIC_ROBOT/devel;/opt/ros/melodic' != '' else []

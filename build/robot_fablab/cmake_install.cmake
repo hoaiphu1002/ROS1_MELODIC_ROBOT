@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/robot_fablab
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/robot_fablab/catkin_generated/installspace/robot_fablab.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab/catkin_generated/installspace/robot_fablab.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_fablab/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/robot_fablab/catkin_generated/installspace/robot_fablabConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/robot_fablab/catkin_generated/installspace/robot_fablabConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab/catkin_generated/installspace/robot_fablabConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/robot_fablab/catkin_generated/installspace/robot_fablabConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_fablab" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/robot_fablab/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_fablab" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/robot_fablab/package.xml")
 endif()
 

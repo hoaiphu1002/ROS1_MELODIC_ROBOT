@@ -1,4 +1,4 @@
-prefix=/home/hoai_phu/catkin_ws/install
+prefix=/home/hoai_phu/ROS1_MELODIC_ROBOT/install
 
 Name: obstacle_detection
 Description: Description of obstacle_detection

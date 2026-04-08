@@ -1,8 +1,8 @@
-# Install script for directory: /home/hoai_phu/catkin_ws/src/rover_2dnav
+# Install script for directory: /home/hoai_phu/ROS1_MELODIC_ROBOT/src/rover_2dnav
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hoai_phu/ROS1_MELODIC_ROBOT/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/catkin_ws/build/rover_2dnav/catkin_generated/installspace/rover_2dnav.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/rover_2dnav/catkin_generated/installspace/rover_2dnav.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_2dnav/cmake" TYPE FILE FILES
-    "/home/hoai_phu/catkin_ws/build/rover_2dnav/catkin_generated/installspace/rover_2dnavConfig.cmake"
-    "/home/hoai_phu/catkin_ws/build/rover_2dnav/catkin_generated/installspace/rover_2dnavConfig-version.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/rover_2dnav/catkin_generated/installspace/rover_2dnavConfig.cmake"
+    "/home/hoai_phu/ROS1_MELODIC_ROBOT/build/rover_2dnav/catkin_generated/installspace/rover_2dnavConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_2dnav" TYPE FILE FILES "/home/hoai_phu/catkin_ws/src/rover_2dnav/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_2dnav" TYPE FILE FILES "/home/hoai_phu/ROS1_MELODIC_ROBOT/src/rover_2dnav/package.xml")
 endif()
 

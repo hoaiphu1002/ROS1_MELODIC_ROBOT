@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/guidance_node.dir/src/guidance_node.cpp.o"
   "CMakeFiles/guidance_node.dir/src/PID.cpp.o"
-  "/home/hoai_phu/catkin_ws/devel/lib/guidance_node/guidance_node.pdb"
-  "/home/hoai_phu/catkin_ws/devel/lib/guidance_node/guidance_node"
+  "/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/guidance_node/guidance_node.pdb"
+  "/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/guidance_node/guidance_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/publish_mqtt_node.dir/src/publish.cpp.o"
-  "/home/hoai_phu/catkin_ws/devel/lib/publish_mqtt/publish_mqtt_node.pdb"
-  "/home/hoai_phu/catkin_ws/devel/lib/publish_mqtt/publish_mqtt_node"
+  "/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/publish_mqtt/publish_mqtt_node.pdb"
+  "/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/lib/publish_mqtt/publish_mqtt_node"
 )
 
 # Per-language clean rules from dependency scanning.

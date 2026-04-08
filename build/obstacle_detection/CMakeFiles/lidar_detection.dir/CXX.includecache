@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/src/obstacle_detection/src/lidar_detection.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/obstacle_detection/src/lidar_detection.cpp
 ros/ros.h
 -
 sensor_msgs/LaserScan.h

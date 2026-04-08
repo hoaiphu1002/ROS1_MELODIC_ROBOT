@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/devel/include/utils/cmd_vel.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/cmd_vel.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/devel/include/utils/pose_robot.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/devel/include/utils/pose_robot.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hoai_phu/catkin_ws/src/cmd_vel/include/can_node.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/include/can_node.h
 ros/ros.h
 -
 utils/pose_robot.h
@@ -76,7 +76,7 @@ cstring
 geometry_msgs/PoseWithCovarianceStamped.h
 -
 
-/home/hoai_phu/catkin_ws/src/cmd_vel/include/wheel_odometry.hpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/include/wheel_odometry.hpp
 ros/ros.h
 -
 nav_msgs/Odometry.h
@@ -84,13 +84,13 @@ nav_msgs/Odometry.h
 mutex
 -
 
-/home/hoai_phu/catkin_ws/src/cmd_vel/src/can_node.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/src/can_node.cpp
 cmath
 -
 can_node.h
-/home/hoai_phu/catkin_ws/src/cmd_vel/src/can_node.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/src/can_node.h
 wheel_odometry.hpp
-/home/hoai_phu/catkin_ws/src/cmd_vel/src/wheel_odometry.hpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/src/wheel_odometry.hpp
 cstdlib
 -
 string
@@ -114,9 +114,9 @@ sensor_msgs/Imu.h
 tf/transform_datatypes.h
 -
 
-/home/hoai_phu/catkin_ws/src/cmd_vel/src/wheel_odometry.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/src/wheel_odometry.cpp
 wheel_odometry.hpp
-/home/hoai_phu/catkin_ws/src/cmd_vel/src/wheel_odometry.hpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/cmd_vel/src/wheel_odometry.hpp
 tf/transform_datatypes.h
 -
 cmath

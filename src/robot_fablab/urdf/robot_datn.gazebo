@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot name="robot_datn_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+
+  <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100.0</update_rate>
+      <visualize>true</visualize>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <ros>
+          <namespace>/imu</namespace>
+        </ros>
+        <frameName>imu_link</frameName>
+        <topicName>imu/data</topicName>
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <gazebo reference="Left_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="Right_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="Caster">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+</robot>

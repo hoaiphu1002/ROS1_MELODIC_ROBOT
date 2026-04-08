@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hoai_phu/catkin_ws/src/slam/include/can_node.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/include/can_node.h
 ros/ros.h
 -
 nav_msgs/Odometry.h
@@ -40,7 +40,7 @@ cstring
 geometry_msgs/PoseWithCovarianceStamped.h
 -
 
-/home/hoai_phu/catkin_ws/src/slam/include/wheel_odometry.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/include/wheel_odometry.h
 ros/ros.h
 -
 nav_msgs/Odometry.h
@@ -48,13 +48,13 @@ nav_msgs/Odometry.h
 mutex
 -
 
-/home/hoai_phu/catkin_ws/src/slam/src/can_node.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/src/can_node.cpp
 cmath
 -
 can_node.h
-/home/hoai_phu/catkin_ws/src/slam/src/can_node.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/src/can_node.h
 wheel_odometry.h
-/home/hoai_phu/catkin_ws/src/slam/src/wheel_odometry.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/src/wheel_odometry.h
 cstdlib
 -
 string
@@ -78,9 +78,9 @@ sensor_msgs/Imu.h
 tf/transform_datatypes.h
 -
 
-/home/hoai_phu/catkin_ws/src/slam/src/wheel_odometry.cpp
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/src/wheel_odometry.cpp
 wheel_odometry.h
-/home/hoai_phu/catkin_ws/src/slam/src/wheel_odometry.h
+/home/hoai_phu/ROS1_MELODIC_ROBOT/src/slam/src/wheel_odometry.h
 tf/transform_datatypes.h
 -
 cmath

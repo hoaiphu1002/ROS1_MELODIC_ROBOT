@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/hoai_phu/catkin_ws/install/setup.sh
+    local-name: /home/hoai_phu/ROS1_MELODIC_ROBOT/install/setup.sh

@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/hoai_phu/catkin_ws/build'
+export LD_LIBRARY_PATH='/opt/ros/melodic/lib'
+export PKG_CONFIG_PATH='/opt/ros/melodic/lib/pkgconfig'
+export PWD='/home/hoai_phu/ROS1_MELODIC_ROBOT/build'
+export PYTHONPATH='/opt/ros/melodic/lib/python2.7/dist-packages'
