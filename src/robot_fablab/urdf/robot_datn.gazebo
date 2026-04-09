@@ -1,40 +1,63 @@
 <?xml version="1.0"?>
-<robot name="robot_datn_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="robot_datn_gazebo" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <!-- ros_control for Gazebo -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
   </gazebo>
 
+  <!-- IMU sensor -->
   <gazebo reference="imu_link">
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
       <update_rate>100.0</update_rate>
       <visualize>true</visualize>
+
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <ros>
+          <!-- output namespace -->
           <namespace>/imu</namespace>
         </ros>
+
         <frameName>imu_link</frameName>
-        <topicName>imu/data</topicName>
+
+        <!-- IMPORTANT: use <topic>, not <topicName> -->
+        <topic>data</topic>
+
         <initial_orientation_as_reference>false</initial_orientation_as_reference>
       </plugin>
     </sensor>
   </gazebo>
 
+  <!-- Base -->
   <gazebo reference="base_link">
     <material>Gazebo/White</material>
   </gazebo>
 
+  <!-- Drive wheels: same friction -->
   <gazebo reference="Left_wheel">
     <material>Gazebo/Black</material>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
   </gazebo>
 
   <gazebo reference="Right_wheel">
     <material>Gazebo/Black</material>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
   </gazebo>
 
+  <!-- Caster: lower friction so it doesn't "pull" the robot -->
   <gazebo reference="Caster">
     <material>Gazebo/Black</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
   </gazebo>
 
 </robot>

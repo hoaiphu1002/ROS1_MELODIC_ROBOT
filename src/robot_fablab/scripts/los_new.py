@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import rospy
 from gazebo_msgs.msg import ModelStates
 from geometry_msgs.msg import Twist
@@ -13,7 +15,7 @@ class AdaptiveLOSTrajectoryController:
     def __init__(self):
         rospy.init_node('adaptive_los_trajectory_controller')
 
-        self.ROBOT_NAME = "reception"
+        self.ROBOT_NAME = "reception_white_v1"
         self.cmd_vel_pub = rospy.Publisher('/Diff_Drive/diff_drive_controller/cmd_vel', Twist, queue_size=10)
         rospy.Subscriber('/gazebo/model_states', ModelStates, self.model_states_callback)
 
@@ -29,16 +31,14 @@ class AdaptiveLOSTrajectoryController:
         self.LINEAR_SPEED = 1
         self.ANGULAR_SPEED = 2
         self.GOAL_RADIUS = 3
-        self.MAX_LINEAR_SPEED = 2
-        self.MAX_ANGULAR_SPEED = 2.5
+        self.MAX_LINEAR_SPEED = 1
+        self.MAX_ANGULAR_SPEED = 2
         self.filtered_linear_x = 0.0
         self.filtered_angular_z = 0.0
 
-        # self.waypoints = [(0,0),(7.765,-4.42),(19.68,-12.1),(28.912,3.44),(35.22, 12.78),(39.6, 10.324),(50.53,2.95)]
-        # self.waypoints = [(0.236976775786, 2.97073580198),(-5.33050850251, -3.44570115279)]
-        # self.waypoints = [(0,0),(4,0)]
-        self.waypoints = [(0, 0), (10, 0),(10, 8),(20.4,6.5),(20.4,-1.23),(25.8,-1.23)]
-        # self.waypoints = [(0, 0), (10.665608, -0.976406),(10.654301, 7.693296)]
+        # Waypoints
+        self.waypoints = [(0, 0), (6, 0), (6, 6), (0,6), (0, 0)]
+
         self.x_data = []
         self.y_data = []
         self.angular_data = []
@@ -48,14 +48,27 @@ class AdaptiveLOSTrajectoryController:
         self.linear_velocity_data = []
         self.angular_velocity_data = []
         self.current_waypoint_index = 0
+
     def model_states_callback(self, msg):
         try:
             index = msg.name.index(self.ROBOT_NAME)
             position = msg.pose[index].position
             orientation = msg.pose[index].orientation
-            _, _, self.current_theta = self.euler_from_quaternion(orientation.x, orientation.y, orientation.z, orientation.w)
+
+            _, _, self.current_theta = self.euler_from_quaternion(
+                orientation.x, orientation.y, orientation.z, orientation.w
+            )
+
             self.current_x = position.x
             self.current_y = position.y
+
+            # Print current pose while running (avoid spamming terminal)
+            rospy.loginfo_throttle(
+                1.0,
+                "POSE: x=%.3f y=%.3f yaw=%.3f",
+                self.current_x, self.current_y, self.current_theta
+            )
+
             self.x_data.append(position.x)
             self.y_data.append(position.y)
         except ValueError:
@@ -73,17 +86,17 @@ class AdaptiveLOSTrajectoryController:
     def normalize_angle(self, angle):
         return (angle + math.pi) % (2 * math.pi) - math.pi
 
-    def control_adaptive_los(self, goal_x, goal_y,previous_x,previous_y):        
-        alpha_k = self.get_heading(previous_x,previous_y,goal_x,goal_y)
-        s_k_1 = ( goal_x - previous_x) * math.cos(alpha_k) + ( goal_y- previous_y) * math.sin(alpha_k)
+    def control_adaptive_los(self, goal_x, goal_y, previous_x, previous_y):
+        alpha_k = self.get_heading(previous_x, previous_y, goal_x, goal_y)
+        s_k_1 = (goal_x - previous_x) * math.cos(alpha_k) + (goal_y - previous_y) * math.sin(alpha_k)
 
         cross_track = -(self.current_x - previous_x) * math.sin(alpha_k) + (self.current_y - previous_y) * math.cos(alpha_k)
-        long_track = (self.current_x - previous_x) * math.cos(alpha_k) + (self.current_y - previous_y) * math.sin(alpha_k)
+        long_track  =  (self.current_x - previous_x) * math.cos(alpha_k) + (self.current_y - previous_y) * math.sin(alpha_k)
 
-        delta = (self.delta_max - self.delta_min) *  math.exp(-0.7 * (cross_track**2)) + self.delta_min
-        
+        delta = (self.delta_max - self.delta_min) * math.exp(-0.7 * (cross_track ** 2)) + self.delta_min
+
         twist = Twist()
-        target_heading = self.normalize_angle(alpha_k + math.atan(-cross_track/delta))
+        target_heading = self.normalize_angle(alpha_k + math.atan(-cross_track / delta))
         self.target_heading_data.append(target_heading)
 
         heading_error = self.normalize_angle(target_heading - self.current_theta)
@@ -96,14 +109,16 @@ class AdaptiveLOSTrajectoryController:
         self.filtered_angular_z = angular_z
 
         dist_to_goal = abs(s_k_1 - long_track)
-        per_dist = abs(s_k_1 - long_track)/s_k_1
+        per_dist = abs(s_k_1 - long_track) / s_k_1 if s_k_1 != 0 else 0.0
+
         if abs(heading_error) > 0.1:
-            twist.linear.x = max(min(self.MAX_LINEAR_SPEED/2 , self.LINEAR_SPEED), 0.05)
+            twist.linear.x = max(min(self.MAX_LINEAR_SPEED / 2.0, self.LINEAR_SPEED), 0.05)
         else:
-            twist.linear.x = max(min(self.MAX_LINEAR_SPEED, self.LINEAR_SPEED * per_dist), 1 )
+            twist.linear.x = max(min(self.MAX_LINEAR_SPEED, self.LINEAR_SPEED * per_dist), 1)
 
+        # Keep your original filter structure (but avoid using unset twist.angular.z)
+        twist.angular.z = self.filtered_angular_z
         self.filtered_angular_z = self.low_pass_filter(self.filtered_angular_z, twist.angular.z, alpha=0.3)
-
         twist.angular.z = self.filtered_angular_z
 
         self.last_heading_error = heading_error
@@ -111,12 +126,12 @@ class AdaptiveLOSTrajectoryController:
         self.time_data.append(current_time - self.start_time)
         self.angular_data.append(self.current_theta)
 
-        return twist,dist_to_goal
+        return twist, dist_to_goal
 
     def smooth_data(self, data, window_size=5):
         if len(data) < window_size:
             return np.array(data)
-        return np.convolve(data, np.ones(window_size)/window_size, mode='valid')
+        return np.convolve(data, np.ones(window_size) / window_size, mode='valid')
 
     def plot_combined(self):
         fig = plt.figure(figsize=(10, 10))
@@ -124,7 +139,8 @@ class AdaptiveLOSTrajectoryController:
 
         ax1 = fig.add_subplot(gs[0, 0])
         min_len_linear = min(len(self.time_data), len(self.linear_velocity_data))
-        ax1.plot(self.time_data[:min_len_linear], self.linear_velocity_data[:min_len_linear], label="Linear Velocity (m/s)", color='blue')
+        ax1.plot(self.time_data[:min_len_linear], self.linear_velocity_data[:min_len_linear],
+                 label="Linear Velocity (m/s)", color='blue')
         ax1.set_xlabel("Time (s)")
         ax1.set_ylabel("Velocity (m/s)")
         ax1.set_title("Linear Velocity")
@@ -158,7 +174,8 @@ class AdaptiveLOSTrajectoryController:
         target_deg_unwrapped = np.degrees(target_unwrapped)
 
         ax3.plot(self.time_data[:min_len_yaw], yaw_deg_unwrapped, label="YAW", color='g')
-        ax3.plot(self.time_data[:min_len_yaw], target_deg_unwrapped, label="Target Heading", color='orange', linestyle='--')
+        ax3.plot(self.time_data[:min_len_yaw], target_deg_unwrapped,
+                 label="Target Heading", color='orange', linestyle='--')
         ax3.set_xlabel("Time (s)")
         ax3.set_ylabel("YAW / Heading (degree)")
         ax3.set_title("YAW vs Target Heading")
@@ -167,7 +184,8 @@ class AdaptiveLOSTrajectoryController:
 
         ax4 = fig.add_subplot(gs[1, 0])
         min_len_angular = min(len(self.time_data), len(self.angular_velocity_data))
-        ax4.plot(self.time_data[:min_len_angular], self.angular_velocity_data[:min_len_angular], label="Angular Velocity (rad/s)", color='red')
+        ax4.plot(self.time_data[:min_len_angular], self.angular_velocity_data[:min_len_angular],
+                 label="Angular Velocity (rad/s)", color='red')
         ax4.set_xlabel("Time (s)")
         ax4.set_ylabel("Angular Velocity (rad/s)")
         ax4.set_title("Angular Velocity")
@@ -182,17 +200,25 @@ class AdaptiveLOSTrajectoryController:
         arrived = False
 
         while not rospy.is_shutdown():
-            if self.current_waypoint_index +1 >= len(self.waypoints):
+            if self.current_waypoint_index + 1 >= len(self.waypoints):
                 rospy.loginfo("Arrived at final destination. Stopping robot.")
                 self.cmd_vel_pub.publish(Twist())
                 arrived = True
                 break
 
-            previous_x,previous_y = self.waypoints[self.current_waypoint_index]
+            previous_x, previous_y = self.waypoints[self.current_waypoint_index]
             goal_x, goal_y = self.waypoints[self.current_waypoint_index + 1]
-            twist,dist = self.control_adaptive_los(goal_x, goal_y,previous_x,previous_y)
+
+            twist, dist = self.control_adaptive_los(goal_x, goal_y, previous_x, previous_y)
             self.linear_velocity_data.append(twist.linear.x)
             self.angular_velocity_data.append(twist.angular.z)
+
+            # Extra print in control loop
+            rospy.loginfo_throttle(
+                1.0,
+                "CTRL: wp=%d goal=(%.2f,%.2f) dist=%.3f cmd(v=%.2f w=%.2f)",
+                self.current_waypoint_index, goal_x, goal_y, dist, twist.linear.x, twist.angular.z
+            )
 
             if dist <= self.GOAL_RADIUS:
                 rospy.loginfo("Reached waypoint ({}, {})".format(goal_x, goal_y))

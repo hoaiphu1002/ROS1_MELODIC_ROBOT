@@ -71,7 +71,7 @@
     <origin xyz="0.71544 0.76308 -0.015158" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="Left_wheel" />
-    <axis xyz="0 1 0" />
+    <axis xyz="0 -1 0" />
     <dynamics damping="0.1" friction="0.1" />
   </joint>
 
@@ -102,7 +102,7 @@
     <origin xyz="0.71544 0.18036 -0.015158" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="Right_wheel" />
-    <axis xyz="0 1 0" />
+    <axis xyz="0 -1 0" />
     <dynamics damping="0.1" friction="0.1" />
   </joint>
 
@@ -136,7 +136,7 @@
     <origin xyz="1.0482 0.47172 0.04" rpy="0 0 3.1416" />
     <parent link="base_link" />
     <child link="Caster" />
-    <axis xyz="0 0 1" />
+    <axis xyz="0 0 -1" />
     <dynamics damping="0.1" friction="0.1" />
   </joint>
 

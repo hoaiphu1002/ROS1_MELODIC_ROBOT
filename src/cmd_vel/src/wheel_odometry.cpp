@@ -4,7 +4,7 @@
 
 #define PI 3.14159265358979323846
 
-static constexpr double WHEEL_BASE = 0.57;
+static constexpr double WHEEL_BASE =  0.58272;
 static constexpr double DT_MAX = 0.2;
 
 double normalizeAngle(double a)
@@ -35,7 +35,10 @@ void updateWheelOdometry(float vel_left, float vel_right,
 
     double v     = (v_r + v_l) / 2.0;
     double omega = (v_r - v_l) / WHEEL_BASE;
-  
+    ROS_INFO_STREAM_THROTTLE(0.2,
+        "raw vel_left=" << vel_left << " raw vel_right=" << vel_right
+        << " | v_l=" << v_l << " v_r=" << v_r
+        << " v=" << v << " omega=" << omega << " dt=" << dt);
 
     // lưu yaw cũ
     double yaw_old = wheel_yaw;
@@ -79,4 +82,3 @@ void updateWheelOdometry(float vel_left, float vel_right,
 
     wheel_odom_pub.publish(odom);
 }
-
